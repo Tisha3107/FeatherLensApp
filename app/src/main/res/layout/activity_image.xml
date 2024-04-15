@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".image">
+
+
+<LinearLayout
+    android:layout_width="450dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/curve"
+    android:elevation="2dp"
+    android:layout_alignParentBottom="true"
+    android:id="@+id/reli">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OPEN CAMERA"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="150dp"
+        android:textColor="@color/black"
+        />
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_marginLeft="9dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        >
+
+        <ImageButton
+            android:layout_width="92dp"
+            android:layout_height="76dp"
+            android:id="@+id/button"
+            android:background="@drawable/ic_camera"
+            android:layout_marginLeft="160dp"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:id="@+id/CardView"
+    android:orientation="vertical"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:gravity="center"
+    android:background="#453216"
+    >
+
+    <ImageView
+        android:layout_width="450dp"
+        android:layout_height="270dp"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        android:id="@+id/imageView"
+        android:src="@drawable/birdlogo2"
+        />
+</LinearLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/CardView"
+    android:background="#ffeeee"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffeeee"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/demoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:justificationMode="inter_word"
+            android:lineSpacingMultiplier="0.9"
+            android:text= "Take a photo of the bird or choose from library"
+            android:textColor="@color/red"
+            android:textSize="22dp"
+            android:textAlignment="center"
+            android:visibility="gone"
+            tools:targetApi="o" />
+
+        <ImageView
+            android:id="@+id/demoArrow"
+            android:layout_width="170dp"
+            android:layout_height="190dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="230dp"
+            android:src="@drawable/arrow_down_line"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/classified"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:includeFontPadding="false"
+            android:text="PREDICTED BIRD IS :"
+            android:textAlignment="center"
+            android:textColor="#0B3E0D"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:includeFontPadding="false"
+            android:letterSpacing="0.06"
+            android:text=""
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/red"
+            android:textSize="28dp" />
+
+        <TextView
+            android:id="@+id/click_here"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:letterSpacing="0.03"
+            android:text="Click on the result to know more..."
+            android:textAlignment="center"
+            android:textColor="#5120A8"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+</RelativeLayout>
+
+</RelativeLayout>

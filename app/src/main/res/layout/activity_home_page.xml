@@ -1,0 +1,126 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFCFC"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/icon_large" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="WebViewLayout">
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"
+                android:scrollbars="none" />
+
+            <TextView
+                android:id="@+id/webview_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_alignParentEnd="true"
+                android:background="@color/dark_blue_gray700"
+                android:paddingHorizontal="3dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="9dp" />
+            <TextView
+                android:id="@+id/webview_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@id/webview_url"
+                android:layout_alignParentEnd="true"
+                android:background="@color/dark_blue_gray700"
+                android:paddingHorizontal="3dp"
+                android:layout_marginEnd="20dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="14dp" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/oval_holo_orange_light_thin"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start">
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start">
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <ImageButton
+        android:layout_width="140dp"
+        android:layout_height="130dp"
+        android:id="@+id/camera"
+        android:layout_marginHorizontal="250dp"
+        android:layout_marginVertical="600dp"
+        android:background="@drawable/camera_button"
+        android:layout_marginLeft="-200dp"
+        android:onClick="onGoToBirdSoundIdentifier"
+        />
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:id="@+id/voice"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="610dp"
+        android:background="@drawable/audio_button"
+        android:layout_marginLeft="-200dp"
+        android:onClick="onGoToBirdSoundIdentifier"
+        />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="10dp"
+        app:fabCradleVerticalOffset="5dp"
+        app:fabAlignmentMode="center">
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
